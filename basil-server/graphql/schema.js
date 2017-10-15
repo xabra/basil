@@ -7,7 +7,7 @@ type Recipe {
     id: ID,
     author: String,
     ingredient: String,
-    servings: Int, 
+    servings: Int,  
 }
 type Query {
   recipe (id: ID): Recipe,
@@ -16,9 +16,9 @@ type Query {
 }
 
 type Mutation {
-    recipeCreate(author: String, ingredient: String, servings: Int): Recipe,
-    recipeDelete(id: ID, author: String, ingredient: String, servings: Int): Int,
-    recipeUpdate(id: ID, author: String, ingredient: String, servings: Int): Recipe,
+    recipeCreate(author: String, ingredient: String, servings: Int): Recipe,    #Works, returns new recipe object
+    recipeDelete(id: ID): String, #Works but return values not understood.
+    recipeUpdate(id: ID, author: String, ingredient: String, servings: Int): Recipe, #Works butreturns null
 }
 
 `); 
