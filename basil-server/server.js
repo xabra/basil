@@ -1,6 +1,7 @@
 var express = require('express');
 var graphqlHTTP = require('express-graphql');
 var schema = require('./graphql/schema');
+var cors = require('cors');
 
 var mongoose = require('mongoose');
 var rootResolver = require('./mongoose/recipe')
@@ -11,6 +12,8 @@ mongoose.connect('mongodb://localhost/test', { useMongoClient: true, promiseLibr
 
 // Create the app, attach middleware and start the app
 var app = express();
+app.use(cors('*'));
+
 app.use('/graphql', graphqlHTTP({
     schema: schema,
     rootValue: rootResolver,

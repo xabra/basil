@@ -1,0 +1,43 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add cors
+
+PATH: 
+  /usr/local/bin/mongodb/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/adambrailove/Library/Python/2.7/bin
+
+Yarn version: 
+  1.2.1
+
+Node version: 
+  6.11.4
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "graphql-test1",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node server.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "express": "^4.16.1",
+      "express-graphql": "^0.6.11",
+      "graphql": "^0.11.7"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: EACCES: permission denied, mkdir '/Users/adambrailove/dev/projects/basil/basil-server/node_modules/cors'
+      at Error (native)
